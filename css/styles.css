@@ -55,12 +55,23 @@ address {
 .button {
   font-family: inherit;
   font-size: var(--fs-secondary);
+  letter-spacing: 0.03em;
   cursor: pointer;
   border: none;
 }
 
-.hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -125,7 +136,8 @@ address {
 
 /* features */
 
-.feature-header {
+.feature-title {
+  line-height: 1.14;
   text-transform: uppercase;
 }
 
@@ -185,11 +197,15 @@ address {
 /* projects */
 
 .project-title {
+  margin: 0;
+  line-height: 2;
   font-size: var(--fs-project-title);
   letter-spacing: 0.06em;
 }
 
 .project-desc {
+  margin: 0;
+  line-height: 1.88;
   font-size: var(--fs-secondary);
   color: var(--txt-clr-main);
 }
@@ -197,6 +213,7 @@ address {
 /* FOOTER */
 
 .footer {
+  line-height: 1.71;
   background-color: var(--bg-clr-black);
 }
 
